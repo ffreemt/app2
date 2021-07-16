@@ -1,0 +1,28 @@
+{
+    "name": "app2",
+    "version": "0.1.0",
+    "description": "description",
+    "main": "index.js",
+    "repository": "git@github.com:ffreemt/app2.git",
+    "author": "ffreemt",
+    "license": "MIT",
+    "dependencies": {
+        "npm-run-all": "^4.1.5"
+    },
+    "scripts": {
+        "start": "pyright && pytest && yarn style",
+        "test": "nodemon -w tests -w app2 -x pytest tests",
+        "pyright": "nodemon -w app2 -w .venv -e .py -x pyright app2 tests",
+        "pytest": "nodemon -w tests -w app2 -e .py -x pytest tests",
+        "style": "nodemon -w app2 -w tests -x \"black tests app2 && python -m flake8\"",
+        "docstyle": "nodemon -w app2 -w tests -x pydocstyle --convention=google tests app2",
+        "pylint": "nodemon -w app2 -e .py -x pylint app2",
+        "test:app2": "nodemon -w tests -e .py -x pytest -k app2 tests",
+        "publish": "poetry build && poetry publish",
+        "black": "black tests app2",
+        "flake8": "flake8 tests app2",
+        "pytest": "pytest",
+        "pep257": "pep257 tests app2",
+        "final": "run-s pep257 black flake8 pytest"
+    }
+}
