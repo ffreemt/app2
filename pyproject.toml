@@ -12,7 +12,10 @@ include = ["LICENSE",]
 python = "^3.7"
 # python = "^3.6.7"
 logzero = "^1.7.0"
-app1 = {git = "https://github.com/ffreemt/app1"}
+streamlit = "^0.84.1"
+Morfessor = "~2.0.6"
+PyICU = "~2.6"
+pycld2 = "~0.41"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
