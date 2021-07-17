@@ -16,6 +16,7 @@ streamlit = "^0.84.1"
 Morfessor = "~2.0.6"
 PyICU = "~2.6"
 pycld2 = "~0.41"
+polyglot = "^16.7.4"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
